@@ -55,10 +55,11 @@ namespace MathOperators
                 }
             }
 
-            catch (Exception caught)
+            catch 
             {
-                expression.Text = "";
-                result.Text = caught.Message;
+                expression.Text = $"{ leftOperand.Text} + { rightOperand.Text}";
+                result.Text = "Invalid Input";
+
             }
         }
             private void addValues()
