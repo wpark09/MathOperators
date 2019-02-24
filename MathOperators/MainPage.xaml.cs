@@ -22,9 +22,95 @@ namespace MathOperators
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
         public MainPage()
         {
             this.InitializeComponent();
         }
+
+        private void Calculate_Click(object sender, RoutedEventArgs e)
+        {
+            
+            try
+            {
+                if ((bool)addition.IsChecked)
+                {
+                    addValues();
+                }
+                else if ((bool)subtraction.IsChecked)
+                {
+                    subtractValues();
+                }
+                else if ((bool)multiplication.IsChecked)
+                {
+                    multiplyValues();
+                }
+                else if ((bool)division.IsChecked)
+                {
+                    divideValues();
+                }
+                else if ((bool)remainder.IsChecked)
+                {
+                    remainderValues();
+                }
+            }
+
+            catch (Exception caught)
+            {
+                expression.Text = "";
+                result.Text = caught.Message;
+            }
+        }
+            private void addValues()
+            {
+                int leftValue = int.Parse(leftOperand.Text);
+                int rightValue = int.Parse(rightOperand.Text);
+                int outcome = 0;
+               
+                outcome = leftValue + rightValue;
+                expression.Text = $"{leftOperand.Text} + {rightOperand.Text}";
+                result.Text = outcome.ToString();
+            }
+
+            private void subtractValues()
+            {
+                int leftValue = int.Parse(leftOperand.Text);
+                int rightValue = int.Parse(rightOperand.Text);
+                int outcome = 0;
+                outcome = leftValue - rightValue;
+                expression.Text = $"{leftOperand.Text} - {rightOperand.Text}";
+                result.Text = outcome.ToString();
+            }
+
+            private void multiplyValues()
+            {
+                int leftValue = int.Parse(leftOperand.Text);
+                int rightValue = int.Parse(rightOperand.Text);
+                int outcome = 0;
+                outcome = leftValue * rightValue;
+                expression.Text = $"{leftOperand.Text} * {rightOperand.Text}";
+                result.Text = outcome.ToString();
+            }
+
+            private void divideValues()
+            {
+                int leftValue = int.Parse(leftOperand.Text);
+                int rightValue = int.Parse(rightOperand.Text);
+                int outcome = 0;
+                outcome = leftValue / rightValue;
+                expression.Text = $"{leftOperand.Text} / {rightOperand.Text}";
+                result.Text = outcome.ToString();
+            }
+
+            private void remainderValues()
+            {
+                int leftValue = int.Parse(leftOperand.Text);
+                int rightValue = int.Parse(rightOperand.Text);
+                int outcome = 0;
+                outcome = leftValue % rightValue;
+                expression.Text = $"{leftOperand.Text} % {rightOperand.Text}";
+                result.Text = outcome.ToString();
+            }
+
     }
 }

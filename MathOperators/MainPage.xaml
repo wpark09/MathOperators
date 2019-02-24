@@ -8,7 +8,24 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
     <Grid>
+        <TextBlock x:Name="leftValue" HorizontalAlignment="Left" Margin="343,179,0,0" Text="Left Operand" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="128" FontWeight="Bold" FontSize="14"/>
+        <TextBlock x:Name="rightVale" HorizontalAlignment="Left" Margin="1016,179,0,0" Text="Right Operand" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="134" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="leftOperand" HorizontalAlignment="Left" Margin="343,248,0,0" Text="" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="rightOperand" HorizontalAlignment="Left" Margin="1016,248,0,0" Text="" VerticalAlignment="Top" Width="96"/>
+        <StackPanel HorizontalAlignment="Center" Height="216" Margin="0,284,0,0" VerticalAlignment="Top" Width="262">
+            <RadioButton x:Name="addition" Content="+ Addition" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <RadioButton x:Name="subtraction" Content="- Subtraction" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <RadioButton x:Name="multiplication" Content="* Multiplication" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <RadioButton x:Name="division" Content="/ Division" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <RadioButton x:Name="remainder" Content="% Remainder" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </StackPanel>
+        <Button x:Name="calculate" Content="Calculate" HorizontalAlignment="Center" Margin="0,500,0,0" VerticalAlignment="Top" Width="145" Click="Calculate_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="519,599,0,0" Text="Expression:" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="144" FontWeight="Bold" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="519,665,0,0" Text="Result:" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="131" FontWeight="Bold" FontSize="14"/>
+        <TextBlock x:Name="expression" HorizontalAlignment="Left" Margin="658,599,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBlock x:Name="result" HorizontalAlignment="Left" Margin="658,665,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
 
     </Grid>
 </Page>
